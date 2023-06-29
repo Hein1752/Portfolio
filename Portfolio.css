@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: burlywood;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Image/background.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+}
+/* nav bar */
+.container{
+    padding-top: 5px;
+}
+.container nav h1{
+    color: black;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background: brown;
+    text-decoration-color: brown;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.2s; 
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav ul li a:hover{
+    transition-timing-function: linear;
+    color: brown;
+    left: 0;
+    transition: .6s;
+}
+.header-text{
+    margin-top: 15%;
+    font-size: 30px;
+    color: black;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    color: black;
+}
+.header-text h2{
+    font-weight: bold;
+}
+.header-text h1 span{
+    color: red;
+}
+.about{
+    font-size: 60px;
+}
+.tab-links{
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background: brown;
+    text-decoration-color: brown;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.2s;
+
+}
+.tab-links:hover::after{
+    width: 100%;
+}
+.tab-links:hover{
+    transition-timing-function: linear;
+    color: brown;
+    left: 0;
+    transition: .6s;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 5px 0;
+    
+}
+.tab-contents ul li span{
+    color: brown;
+    font-size: 15px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.learn{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.learn::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background: brown;
+    text-decoration-color: brown;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.2s; 
+}
+.learn:hover::after{
+    width: 100%;
+}
+.learn:hover{
+    transition-timing-function: linear;
+    color: brown;
+    left: 0;
+    transition: .4s;
+}
+.contact{
+    margin-top: 30px;
+}
+.contact{
+    font-size: 25px;
+}
+.email,.phone{
+    text-decoration: none;
+    cursor: pointer;
+}
+.icon a{
+    transition: transform 0.5s;
+    display: inline-block;
+}
+.icon a:hover{
+    transform: translateY(-5px);
+}
+nav .fas{
+    display: none;
+}
+.service div{
+    display: inline-block;
+    transition: 0.5s;
+}
+.service div:hover{
+    transform: translateY(-5px);
+}
+.service h2,p{
+    cursor: default;
+}
+@media only screen and (max-width: 576px){
+    .header-text{
+        margin-top: 50%;
+        margin-left: 25px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: transparent;
+        backdrop-filter: blur(2px);
+        position: fixed;
+        top: 0px;
+        right: -200px;
+        width: 200px;
+        height: 50vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .about{
+        font-size: 40px;
+    }
+    .image{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .header-text{
+        font-size: 19px;
+        margin-top: 30%;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: transparent;
+        backdrop-filter: blur(2px);
+        position: fixed;
+        top: 0px;
+        right: -200px;
+        width: 200px;
+        height: 50vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .image{
+        text-align: center;
+    }
+}
